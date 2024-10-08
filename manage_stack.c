@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instructions_push.c                                :+:      :+:    :+:   */
+/*   manage_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 11:49:34 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/02 14:40:50 by abillote         ###   ########.fr       */
+/*   Created: 2024/10/01 17:40:31 by abillote          #+#    #+#             */
+/*   Updated: 2024/10/03 14:47:29 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack **stack_1, t_stack **stack_2)
+//used to check for errors
+void	print_stack(t_stack *stack_a)
 {
-	t_stack	*tmp;
+	t_stack	*current;
 
-	if (!stack_2 || !*stack_2)
-		return ;
-	tmp = *stack_2;
-	ft_lstadd_front_stack(stack_1, ft_lstnew_stack((*stack_2)->content));
-	*stack_2 = tmp->next;
-	free(tmp);
+	current = stack_a;
+	while (current)
+	{
+		ft_printf("%d\n", current->content);
+		current = current->next;
+	}
 }
 
-void	push_a(t_stack **stack_a, t_stack **stack_b)
+void	free_stack(t_stack *stack)
 {
-	push(stack_a, stack_b);
-	ft_printf("pa\n");
+	t_stack	*current;
+
+	current = stack;
+	while (stack)
+	{
+		current = stack;
+		stack = stack->next;
+		free(current);
+	}
+	free(stack);
 }
 
-void	push_b(t_stack **stack_b, t_stack **stack_a)
+void	error_input(void)
 {
-	push(stack_b, stack_a);
-	ft_printf("pb\n");
+	write(2, "Error\n", 6);
+	exit (EXIT_FAILURE);
 }

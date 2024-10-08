@@ -6,11 +6,28 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:37:58 by abillote          #+#    #+#             */
-/*   Updated: 2024/05/19 17:39:15 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/03 16:48:29 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+char	**string_to_numbers(char *s)
+{
+	int		i;
+	char	**substrg;
+
+	i = 0;
+	while (s[i])
+	{
+		if (!((s[i] >= '0' && s[i] <= '9') || s[i] == '-' \
+		|| s[i] == '+' || s[i] == 32))
+			error_input();
+		i++;
+	}
+	substrg = ft_split(s, 32);
+	return (substrg);
+}
 
 void	ft_check_double(t_stack **stack_a, int value)
 {
@@ -20,7 +37,10 @@ void	ft_check_double(t_stack **stack_a, int value)
 	while (current)
 	{
 		if (current->content == value)
+		{
+			free_stack(*stack_a);
 			error_input();
+		}
 		current = current->next;
 	}
 }
@@ -64,21 +84,4 @@ void	check_input_and_store_stack(t_stack **stack_a, char **substrg, int i)
 		j++;
 	}
 	store_stack(stack_a, substrg, i);
-}
-
-char	**string_to_numbers(char *s)
-{
-	int		i;
-	char	**substrg;
-
-	i = 0;
-	while (s[i])
-	{
-		if (!((s[i] >= '0' && s[i] <= '9') || s[i] == '-' \
-		|| s[i] == '+' || s[i] == 32))
-			error_input();
-		i++;
-	}
-	substrg = ft_split(s, 32);
-	return (substrg);
 }

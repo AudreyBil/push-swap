@@ -6,66 +6,50 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 15:32:20 by abillote          #+#    #+#             */
-/*   Updated: 2024/06/05 14:36:25 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/08 15:56:25 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//to check for mistakes
-void	print_stack(t_stack *stack_a)
+void	free_split(char **input)
 {
-	t_stack	*current;
+	int	i;
 
-	current = stack_a;
-	while (current)
+	i = 0;
+	while (input[i])
 	{
-		ft_printf("%d\n", current->content);
-		current = current->next;
+		free(input[i]);
+		i++;
 	}
-}
-
-void	free_stack(t_stack *stack)
-{
-	t_stack	*current;
-
-	current = stack;
-	while (stack)
-	{
-		current = stack;
-		stack = stack->next;
-		free(current);
-	}
-}
-
-void	error_input(void)
-{
-	ft_printf("Error\n");
-	exit (EXIT_FAILURE);
+	free(input);
 }
 
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
+	char	**input;
 
 	stack_a = NULL;
 	stack_b = NULL;
+	if (argc < 2)
+		return (0);
 	if (argc == 2)
-		return (0);
-	if (argc > 2)
 	{
-		check_input_and_store_stack(&stack_a, argv, 1);
-		if (ft_check_sorted(stack_a) == 0)
-		{
-			if (ft_lstsize_stack(stack_a) > 1 && ft_lstsize_stack(stack_a) < 6)
-				sort_small(&stack_a, &stack_b);
-			else
-				sort_big(&stack_a, &stack_b);
-		}
-		free_stack(stack_a);
-		free_stack(stack_b);
+		input = ft_split(argv[1], ' ');
+		check_input_and_store_stack_split(&stack_a, input, 0);
+		free_split(input);
 	}
-	else
-		return (0);
+	if (argc > 2)
+		check_input_and_store_stack(&stack_a, argv, 1);
+	if (ft_check_sorted(stack_a) == 0)
+	{
+		if (ft_lstsize_stack(stack_a) > 1 && ft_lstsize_stack(stack_a) < 6)
+			sort_small(&stack_a, &stack_b);
+		else
+			sort_big(&stack_a, &stack_b);
+	}
+	free_stack(stack_a);
+	free_stack(stack_b);
 }

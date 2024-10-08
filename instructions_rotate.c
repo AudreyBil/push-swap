@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:53:50 by abillote          #+#    #+#             */
-/*   Updated: 2024/06/05 14:26:12 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/02 14:43:24 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	rotate(t_stack **stack)
 	t_stack	*first;
 	t_stack	*last;
 
+	if (!stack || !*stack)
+		return ;
 	first = *stack;
 	last = *stack;
 	while (last->next)

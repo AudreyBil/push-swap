@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 15:33:56 by abillote          #+#    #+#             */
-/*   Updated: 2024/06/05 14:52:56 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:11:38 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_stack
 //Error handling and free
 void	error_input(void);
 void	free_stack(t_stack *stack);
+void	free_split(char **input);
 
 //Utility functions
 long	ft_atoi_adapted(const char *nptr);
@@ -44,16 +45,24 @@ t_stack	*lst_min(t_stack *stack);
 void	ft_check_double(t_stack **stack_a, int value);
 void	store_stack(t_stack **stack_a, char **substrg, int i);
 void	check_input_and_store_stack(t_stack **stack_a, char **substrg, int i);
+void	check_input_and_store_stack_split(t_stack **stack_a, \
+			char **substrg, int i);
+void	store_stack_split(t_stack **stack_a, char **substrg, int i);
+void	ft_check_double_split(t_stack **stack_a, int value, char **substrg);
 
 //Operations
+void	swap(t_stack **stack);
 void	swap_a(t_stack **stack_a);
 void	swap_b(t_stack **stack_b);
 void	swap_both(t_stack **stack_a, t_stack **stack_b);
+void	push(t_stack **stack_1, t_stack **stack_2);
 void	push_a(t_stack **stack_a, t_stack **stack_b);
 void	push_b(t_stack **stack_b, t_stack **stack_a);
+void	rotate(t_stack **stack);
 void	rotate_a(t_stack **stack_a);
 void	rotate_b(t_stack **stack_a);
 void	rotate_both(t_stack **stack_a, t_stack **stack_b);
+void	reverse_rotate(t_stack **stack);
 void	reverse_rotate_a(t_stack **stack_a);
 void	reverse_rotate_b(t_stack **stack_b);
 void	reverse_rotate_both(t_stack **stack_a, t_stack **stack_b);

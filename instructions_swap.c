@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:48:59 by abillote          #+#    #+#             */
-/*   Updated: 2024/05/19 17:43:24 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/02 14:43:47 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	swap(t_stack **stack)
 {
 	int	swap;
 
+	if (!stack || !*stack)
+		return ;
 	swap = 0;
 	swap = (*stack)->content;
 	(*stack)->content = (*stack)->next->content;

@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:56:17 by abillote          #+#    #+#             */
-/*   Updated: 2024/05/19 17:27:08 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/02 14:42:30 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	reverse_rotate(t_stack **stack)
 	t_stack	*last;
 	t_stack	*second_last;
 
+	if (!stack || !*stack)
+		return ;
 	last = *stack;
 	second_last = NULL;
 	while (last->next != NULL)
