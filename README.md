@@ -7,12 +7,15 @@ The Push Swap project involves sorting a set of integers using two stacks (a and
 **Usage**
 
 Clone the repository:
+
     git@github.com:AudreyBil/push-swap.git
 
 Compile the project using make:
+
     make
 
 Run the project by executing:
+
     ./push_swap [numbers]
 Replace [numbers] by any list of unsorted numbers, without duplicates
 
@@ -33,8 +36,6 @@ Replace [numbers] by any list of unsorted numbers, without duplicates
     ss, rr, rrr: Simultaneous operations for both stacks.
 
 **Approach**
-
-Solution Strategy
 
     For 2 values:
         Check if the stack is sorted; if not, swap the top two elements (sa).
