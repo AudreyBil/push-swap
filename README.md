@@ -1,23 +1,47 @@
 # push-swap
 
-Pseudo code:
-For 2 values:
-	- check if sorted, if not swap a
-For 3 values:
-	- store the values in a, b and. Swap, rotate and reverse rotate based on values order.
-For up to 5 values:
-	- find the min, move it to the top of a, push it to b X 2
-	- use the sort 3 num algo or sort 2 num to sort a
-	- push the two values in b back
+**Overview**
 
-For more than 5 values:
-	- Find the average of stack a, keep pushing all numbers above average to stack b, until there is only 3 numbers left in a
-	- Set index for stack a and stack b (index being part of the structure t_stack)
-	- Go through stack_b, and find the cheapest move:
-		- Find the target in stack_a for each num of stack_b (= the node that should be on top of a to push the num from b)
-		- calculate how many rotations are needed to put the target on top of a and the num on top of b
-	- Rotate stacks until both target and cheapest are on top
-	- push b to a
-	- do it as long as there is a node in stack_b
-	- move min node to top of stack a
-	- Free both stacks
+The Push Swap project involves sorting a set of integers using two stacks (a and b). The objective is to sort all the elements in stack a in ascending order using a limited set of operations. Stack b is initially empty, and the challenge is to use less than 5500 operations to achieve a fully sorted stack of 500 integers.
+
+**Rules**
+
+    Stacks:
+        Stack a contains a random set of non-duplicated integers (both positive and negative).
+        Stack b starts empty.
+    Goal: Sort all numbers in stack a in ascending order using specific stack operations like swaps, pushes, and rotations.
+
+**Operations**
+
+    sa / sb: Swap the first two elements of stacks a or b.
+    pa: Push the top element from b to a.
+    pb: Push the top element from a to b.
+    ra / rb: Rotate stack a or b (shift elements up).
+    rra / rrb: Reverse rotate stack a or b (shift elements down).
+    ss, rr, rrr: Simultaneous operations for both stacks.
+
+**Approach**
+
+Solution Strategy
+
+    For 2 values:
+        Check if the stack is sorted; if not, swap the top two elements (sa).
+
+    For 3 values:
+        Use a combination of swaps, rotations, and reverse rotations based on the order of the elements.
+
+    For up to 5 values:
+        Find the minimum values, move them to the top of a, and push them to b.
+        Sort the remaining values in a using the previous 3-value algorithm.
+        Push the sorted values back from b to a.
+
+    For more than 5 values:
+        Split the stack using the average value as a pivot, pushing numbers above the average to b.
+        Assign indexes to the elements for easier targeting.
+        Calculate the most "cost-effective" moves to minimize the number of operations for sorting.
+        Rotate stacks to align the target and perform efficient pushes from b to a.
+        Once b is empty, ensure a is sorted with minimal operations.
+
+**Results**
+
+The program will output the smallest set of operations required to sort the stack. If errors occur (e.g., invalid input, duplicates, etc.), the program will display appropriate error messages.
