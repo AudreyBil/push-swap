@@ -1,4 +1,4 @@
-# push-swap
+# push-swap - 42 Project
 
 **Overview**
 
