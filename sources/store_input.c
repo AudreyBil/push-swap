@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:37:58 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/03 16:48:29 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:30:17 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char	**string_to_numbers(char *s)
 {

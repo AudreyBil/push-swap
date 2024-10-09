@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 18:28:08 by abillote          #+#    #+#             */
-/*   Updated: 2024/06/05 13:35:21 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:28 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_check_sorted(t_stack *stack)
 {

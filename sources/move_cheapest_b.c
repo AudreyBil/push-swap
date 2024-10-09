@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 13:36:28 by abillote          #+#    #+#             */
-/*   Updated: 2024/06/05 14:28:17 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:30:07 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	prepare_stacks(t_stack **stack_a, t_stack **stack_b, \
 								t_stack *target, t_stack *cheapest)

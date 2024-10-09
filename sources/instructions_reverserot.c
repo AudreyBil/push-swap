@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:56:17 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/02 14:42:30 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:41 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	reverse_rotate(t_stack **stack)
 {

@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 15:32:20 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/08 15:56:25 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:59 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	free_split(char **input)
 {

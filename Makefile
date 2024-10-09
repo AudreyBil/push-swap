@@ -5,34 +5,34 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 LIBFTPATH = ./libft
 
-SRCS = main.c					\
-	ft_atoi_adapted.c			\
-	store_input.c				\
-	instructions_push.c			\
-	instructions_swap.c			\
-	instructions_rotate.c		\
-	instructions_reverserot.c	\
-	algo_small.c				\
-	algo_utils.c				\
-	algo_utils_2.c				\
-	list_utils.c				\
-	algo_big.c					\
-	move_cheapest_b.c			\
-	manage_stack.c				\
-	store_input_string.c		\
+SRCS = sources/main.c					\
+	sources/ft_atoi_adapted.c			\
+	sources/store_input.c				\
+	sources/instructions_push.c			\
+	sources/instructions_swap.c			\
+	sources/instructions_rotate.c		\
+	sources/instructions_reverserot.c	\
+	sources/algo_small.c				\
+	sources/algo_utils.c				\
+	sources/algo_utils_2.c				\
+	sources/list_utils.c				\
+	sources/algo_big.c					\
+	sources/move_cheapest_b.c			\
+	sources/manage_stack.c				\
+	sources/store_input_string.c		\
 
 SRCS_BONUS = bonus/checker_main.c		\
 		bonus/operations_both_bonus.c	\
-		instructions_push.c				\
-		instructions_swap.c				\
-		instructions_rotate.c			\
-		instructions_reverserot.c		\
-		store_input.c					\
-		ft_atoi_adapted.c				\
-		manage_stack.c					\
-		list_utils.c					\
-		algo_utils.c					\
-		algo_utils_2.c					\
+		sources/instructions_push.c				\
+		sources/instructions_swap.c				\
+		sources/instructions_rotate.c			\
+		sources/instructions_reverserot.c		\
+		sources/store_input.c					\
+		sources/ft_atoi_adapted.c				\
+		sources/manage_stack.c					\
+		sources/list_utils.c					\
+		sources/algo_utils.c					\
+		sources/algo_utils_2.c					\
 
 
 OBJS = $(SRCS:.c=.o)

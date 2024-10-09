@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:49:34 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/02 14:40:50 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:37 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	push(t_stack **stack_1, t_stack **stack_2)
 {

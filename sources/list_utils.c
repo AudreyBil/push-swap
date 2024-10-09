@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 17:30:23 by abillote          #+#    #+#             */
-/*   Updated: 2024/05/19 17:46:56 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:55 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_lstsize_stack(t_stack *lst)
 {

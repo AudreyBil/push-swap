@@ -6,11 +6,11 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:29:15 by abillote          #+#    #+#             */
-/*   Updated: 2024/02/08 17:32:50 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:32 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 long	ft_atoi_adapted(const char *nptr)
 {
