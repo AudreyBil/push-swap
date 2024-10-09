@@ -4,6 +4,18 @@
 
 The Push Swap project involves sorting a set of integers using two stacks (a and b). The objective is to sort all the elements in stack a in ascending order using a limited set of operations. Stack b is initially empty, and the challenge is to use less than 5500 operations to achieve a fully sorted stack of 500 integers.
 
+**Usage**
+
+Clone the repository:
+    git@github.com:AudreyBil/push-swap.git
+
+Compile the project using make:
+    make
+
+Run the project by executing:
+    ./push_swap [numbers]
+Replace [numbers] by any list of unsorted numbers, without duplicates
+
 **Rules**
 
     Stacks:
