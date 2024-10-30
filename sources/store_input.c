@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:37:58 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/09 13:30:17 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:47:08 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	store_stack(t_stack **stack_a, char **substrg, int i)
 	}
 }
 
-void	check_input_and_store_stack(t_stack **stack_a, char **substrg, int i)
+void	create_stack_a(t_stack **stack_a, char **substrg, int i)
 {
 	int	j;
 	int	k;

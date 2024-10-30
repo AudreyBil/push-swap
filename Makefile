@@ -64,7 +64,7 @@ re: fclean all
 
 bonus: $(NAME_BONUS)
 
-$(NAME_BONUS) : makelibft $(OBJS_BONUS)
+$(NAME_BONUS) : $(OBJS_BONUS)
 	$(CC) $(OBJS_BONUS) -L./libft -lft -o $(NAME_BONUS)
 
 .PHONY: all clean fclean re libft

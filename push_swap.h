@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 15:33:56 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/08 17:11:38 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:48:44 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_stack
 //Error handling and free
 void	error_input(void);
 void	free_stack(t_stack *stack);
-void	free_split(char **input);
+void	free_string(char **input);
 
 //Utility functions
 long	ft_atoi_adapted(const char *nptr);
@@ -44,11 +44,11 @@ t_stack	*lst_min(t_stack *stack);
 //Store input
 void	ft_check_double(t_stack **stack_a, int value);
 void	store_stack(t_stack **stack_a, char **substrg, int i);
-void	check_input_and_store_stack(t_stack **stack_a, char **substrg, int i);
-void	check_input_and_store_stack_split(t_stack **stack_a, \
+void	create_stack_a(t_stack **stack_a, char **substrg, int i);
+void	create_stack_a_string(t_stack **stack_a, \
 			char **substrg, int i);
-void	store_stack_split(t_stack **stack_a, char **substrg, int i);
-void	ft_check_double_split(t_stack **stack_a, int value, char **substrg);
+void	store_stack_string(t_stack **stack_a, char **substrg, int i);
+void	ft_check_double_string(t_stack **stack_a, int value, char **substrg);
 
 //Operations
 void	swap(t_stack **stack);

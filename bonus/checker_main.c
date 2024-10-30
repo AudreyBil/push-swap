@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:47:31 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/08 17:12:58 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:47:12 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	main(int argc, char **argv)
 		error_input();
 	if (argc > 2)
 	{
-		check_input_and_store_stack(&a_bonus, argv, 1);
+		create_stack_a(&a_bonus, argv, 1);
 		read_execute_instructions(&a_bonus, &b_bonus);
 		if (ft_check_sorted(a_bonus) == 1 && b_bonus == NULL)
 			ft_printf("OK\n");

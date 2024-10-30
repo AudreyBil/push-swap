@@ -6,7 +6,7 @@
 /*   By: abillote <abillote@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:24:29 by abillote          #+#    #+#             */
-/*   Updated: 2024/10/09 13:29:19 by abillote         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:53:41 by abillote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sort_small(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_two_numb(t_stack **stack_a)
 {
-	if ((*stack_a)->content > (*stack_a)->next->content)
+	if (ft_check_sorted(*stack_a) == 0)
 		swap_a(stack_a);
 }
 
